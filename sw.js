@@ -24,15 +24,16 @@ self.addEventListener('activate', event => {
     event.waitUntil(clients.claim());
   });
 
-  self.addEventListener('fetch', (event) => {
+  self.addEventListener('fetch', function(event) {
     event.respondWith(
-      caches.match(event.request).then((resp) => {
-        return resp || fetch(event.request).then((response) => {
-          return caches.open('v1').then((cache) => {
-            cache.put(event.request, response.clone());
+      caches.match(event.request)
+        .then(function(response) {
+          // Cache hit - return response
+          if (response) {
             return response;
-          });
-        });
-      })
+          }
+          return fetch(event.request);
+        }
+      )
     );
 });
