@@ -7,7 +7,14 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
     'https://cse110lab6.herokuapp.com/entries',
-    './'
+    'https://roseybugayon.github.io/Lab7/',
+    'https://roseybugayon.github.io/Lab7/scripts/router.js',
+    'https://roseybugayon.github.io/Lab7/scripts/script.js',
+    'https://roseybugayon.github.io/Lab7/sw.js',
+    'https://roseybugayon.github.io/Lab7/settings.svg',
+    'https://roseybugayon.github.io/Lab7/style.css',
+    'https://rooseybugayon.github.io/Lab7/components/entry-page.js',
+    'https://roseybugayon.github.io/Lab7/components/journal-entry.js',
 ];
 
 self.addEventListener('install', function(event) {
