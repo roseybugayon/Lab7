@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         newPost.num = counter++;
         document.querySelector('main').appendChild(newPost);
         newPost.addEventListener('click', () => {
-          setState({page: 'Entry page', id: newPost.num, entry: entry});
+          setState({page: 'Entry page', id: newPost.num, entry: entry}, false);
         });
       });
     });
