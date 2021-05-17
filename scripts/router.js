@@ -9,7 +9,7 @@ router.setState = function(event, back) {
   let entryPage = document.getElementsByTagName('entry-page')[0];
   let thisEntry = document.createElement('entry-page');
 
-  if (event.page == "home page" || event == null) {
+  if (event.page === "home page") {
     if (!back) {
       history.pushState(event, "", window.location.origin);
     }
