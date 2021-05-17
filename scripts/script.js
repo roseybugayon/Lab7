@@ -17,13 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
           setState({page: 'Entry page', id: newPost.num, entry: entry});
         });
       });
-      setState({page: "home page"}, false);
     });
 });
 
 window.onpopstate = function(event) {
   setState(event.state, true);
 }
+
+document.querySelector("h1").addEventListener('click', () => {
+  setState({page: "home"}, false);
+});
 
 document.querySelector("[alt='settings']").addEventListener("click", () => {
     setState({page:"settings"}, false);
