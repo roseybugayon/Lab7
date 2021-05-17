@@ -24,10 +24,6 @@ window.onpopstate = function(event) {
   setState(event.state, true);
 }
 
-document.querySelector("h1").addEventListener('click', () => {
-  setState({page: "home"}, false);
-});
-
 document.querySelector("[alt='settings']").addEventListener("click", () => {
     setState({page:"settings"}, false);
 });
